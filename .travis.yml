@@ -1,0 +1,12 @@
+language: generic
+sudo: required
+
+services:
+        - docker
+
+before_install:
+        - docker build -t sanwill/docker-bionic-01 -f Dockerfile.dev .
+
+script:
+        - docker run sanwill/docker-bionic-01 hostname
+
