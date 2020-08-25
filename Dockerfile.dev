@@ -1,5 +1,5 @@
 # Use existing docker image as base
-FROM swkhodocker/bionic:latest as bionic_base
+FROM swkhodocker/bionic-02:latest as bionic_base
 
 # Download & install depedency
 RUN cat /etc/lsb-release
