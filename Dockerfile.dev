@@ -3,7 +3,9 @@ FROM swkhodocker/bionic-02:latest as bionic_base
 
 # Download & install depedency
 RUN cat /etc/lsb-release
-#RUN tail -f /dev/null
+
+# This line is for feature branch
+COPY testcp_script.sh /opt/
 
 # Tell the image what to do when it starts as a container
 #CMD ["cat /etc/lsb-release"]
