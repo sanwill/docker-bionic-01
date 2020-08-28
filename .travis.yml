@@ -8,5 +8,5 @@ before_install:
         - docker build -t sanwill/travis-docker-bionic-02 -f Dockerfile.dev .
 
 script:
-        - docker run sanwill/travis-docker-bionic-02 /bin/bash -c "echo \"Hello Travis\"; sh /opt/test_script.sh; echo; chmod 777 /opt/testcp_script.sh; /opt/testcp_script.sh"
+        - docker run sanwill/travis-docker-bionic-02 /bin/bash -c "echo \"Hello Travis\"; sh /opt/test_script.sh; echo; chmod 777 /opt/testcp_script.sh; /opt/testcp_script.sh; ls -l /opt;echo \"End of travis script\""
 
